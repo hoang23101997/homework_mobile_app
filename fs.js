@@ -73,9 +73,44 @@ const main = async () => {
   console.log("dataAfterDelete return:", dataAfterDelete);
 };
 
+const replaceUser = async (userId, dataUpdate) => {
+  const oldData = await readAll();
+  const newData = oldData.map(user => {
+      if (user.id === userId) {
+          return {
+              ...dataUpdate,
+              id: userId
+          }
+      }
+      return user;
+  })};
+
+  const userLogin = async (username, password) => {
+    const oldData = await readAll();
+    let errMessage = ''
+    const user = oldData.find(user => {
+        if (user.username !== username) {
+            errMessage = 'username not found';
+            return false;
+        }
+        if (user.password !== password) {
+            errMessage = 'Password not match';
+            return false;
+        }
+        return true;
+    });
+
+    if (user) {
+        return user;
+    }
+    throw new Error(errMessage);
+};
+
 module.exports = {
   readAll,
-  createNewUser,
   updateUser,
   deleteUser,
-};
+  replaceUser,
+  userLogin,
+  createNewUser
+}
