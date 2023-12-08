@@ -1,17 +1,22 @@
 [
-  {
-    "name": "Hoang",
-    "id": 1,
-    "age": 25
-  },
-  {
-    "name": "John",
-    "id": 2,
-    "age": 25
-  },
-  {
-    "name": "New",
-    "id": 5,
-    "age": 25
-  }
+    {
+        "email": "hoang2345@gmail.com",
+        "password": 123456,
+        "fullname": "hoang2345"
+    },
+    {
+        "email": "hoang234@gmail.com",
+        "password": 123456,
+        "fullname": "hoang234"
+    },
+    {
+        "email": "hoang23@gmail.com",
+        "password": 123456,
+        "fullname": "hoang23"
+    },
+    {
+        "email": "hoang2@gmail.com",
+        "password": 123456,
+        "fullname": "hoang2"
+    }
 ]
